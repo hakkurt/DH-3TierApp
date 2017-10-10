@@ -2936,7 +2936,8 @@ dl {
     margin-top: 24px
 }
 table {
-    border-spacing: 0
+    border-spacing: 0;
+	text-align=center;
 }
 a:link {
     color: #007cbb;
@@ -8080,8 +8081,10 @@ _:-ms-input-placeholder .progress-block>label {
     background-color: #fff;
     color: #565656;
     margin: 24px 0 0 0;
+	margin-left: 150px;
     max-width: 100%;
-    width: 100%
+    width: 70%;
+	text-align:center
 }
 .table td,
 .table th {
