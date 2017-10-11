@@ -62,8 +62,8 @@ EOF
 
 systemctl restart systemd-networkd
 docker rm -f $(docker ps -aq)
-docker run -v /root/www:/var/www/html/ -p 8443:80 --add-host db-ip:$db_ip -d appsrv:dockerfile
-
+#docker run -v /root/www:/var/www/html/ -p 8443:80 --add-host db-ip:$db_ip -d appsrv:dockerfile
+docker run -v /root/www:/var/www/html/public -p 8443:80 --add-host db-ip:$db-ip -d shin1x1/docker-php71-apache
 
 iptables -I INPUT -j ACCEPT
 
