@@ -61,7 +61,7 @@ EOF
 
 
 systemctl restart systemd-networkd
-
+systemctl restart nginx
 iptables -I INPUT -j ACCEPT
 
 fi
