@@ -55,7 +55,7 @@ cat <<EOF >  /etc/systemd/network/10-static-en.network
 Name=eth0
 
 [Network]
-Address=$vm_ip
+Address=$vm_ip/24
 Gateway=$vm_gateway
 EOF
 
