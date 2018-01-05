@@ -59,10 +59,10 @@ Address=$vm_ip/24
 Gateway=$vm_gateway
 EOF
 
-
+fi
 systemctl restart systemd-networkd
 systemctl restart nginx
 iptables -I INPUT -j ACCEPT
 
-fi
+
 
