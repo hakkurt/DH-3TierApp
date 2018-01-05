@@ -58,11 +58,10 @@ Name=eth0
 Address=$vm_ip/24
 Gateway=$vm_gateway
 EOF
-
+fi
 
 systemctl restart systemd-networkd
 docker rm -f $(docker ps -aq)
 docker run -tid -p 5432:5432 --name="dh-postgres" -v /root/psqldata:/var/lib/postgresql/data postgres
 iptables -I INPUT -j ACCEPT
-fi
 
