@@ -58,12 +58,12 @@ Name=eth0
 Address=$vm_ip/24
 Gateway=$vm_gateway
 EOF
-
+fi
 
 systemctl restart systemd-networkd
 
 iptables -I INPUT -j ACCEPT
 
 
-fi
+
 
